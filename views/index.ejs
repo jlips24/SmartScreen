@@ -1,0 +1,38 @@
+<div class="row mt-4">
+	<div class="col-md-5">
+		<div class="box shadow mt-4">
+			<div style="font-weight: bolder; font-size: 20px;"> Top News </div>
+			<div id="topleftquad"> </div>
+		</div>
+	</div>
+	<div class="col-md-7">
+		<div class="box shadow mt-4">
+			<div style="font-weight: bolder; font-size: 20px;"> Daily Calendar </div>
+			<div id="toprightquad" class=""> </div>
+		</div>
+	</div>
+</div>
+
+<div class="row mt-4">
+	<div class="col-md-5">
+		<div class="box shadow mt-4">
+			<div style="font-weight: bolder; font-size: 20px;"> Apple News </div>
+			<div id="botleftquad"></div>
+		</div>
+	</div>
+
+	<div class="col-md-7">
+		<div class="box shadow mt-4">
+			<div style="font-weight: bolder; font-size: 20px;">  </div>
+			<div id="botrightquad"></div>
+		</div>
+	</div>
+
+</div>
+
+<!-- Begin Scripting -->
+<script>
+	getTopNewsHeadlines();
+	
+	var myVar = setInterval(function(){ getTopNewsHeadlines() }, 2000000);
+</script>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible content=ie-edge">
+	<title>SmartScreen</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/layoutStyle.css">
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="/assets/stocksScript.js"></script>
+	<script type="text/javascript" src="/assets/timeScript.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+</head>
+<body>
+
+
+	<div id="wrapper">
+
+		<div class="content-area">
+			<div class="container-fluid">
+				<div class="main">
+
+					<div class="row sparkboxes mt-4">
+						<div class="col-md-3">
+							<div class="details">
+								<h1 style="font-weight: bold; color: white" id="currentTime"> </h1>
+								<h6 id="currentDate"></h6>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="box box2">
+									<div class="details">
+										<h2>DJIA</h2>
+										<h4></h4>
+									</div>
+								<div style="text-align: center; font-weight: bold;" id="spark2"></div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="box box3">
+									<div class="details">
+										<h2>AAPL</h2>
+										<h4></h4>
+									</div>
+								<div style="text-align: center; font-weight: bold;" id="spark3"></div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="box box4">
+								<div class="details">
+									<h2>BTC</h2>
+									<h4></h4>
+								</div>
+								<div style="text-align: center; font-weight: bold;" id="spark4"></div>
+							</div>
+						</div>
+					</div>
+					
+					<%- body %>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+	</div>
+
+	<!-- Begin Scriping -->
+	<script>
+
+		getDJIAPrice();
+		getAAPLPrice();
+		getBTCPrice();
+
+		updateTime();
+		updateDate();
+
+		//getTopNewsHeadlines();
+		//getAppleNewsHeadlines();
+
+		var myVar = setInterval(function(){ getDJIAPrice() }, 1000000); 
+		var myVar = setInterval(function(){ getAAPLPrice() }, 1000000); // Update every 15 minutes
+		var myVar = setInterval(function(){ getBTCPrice() }, 1000000); 
+
+		//var myVar = setInterval(function(){ getTopNewsHeadlines() }, 2000000); //Update every 30 minutes
+		//var myVar = setInterval(function(){ getAppleNewsHeadlines() }, 2000000); 
+
+		var myVar = setInterval(function(){ updateTime() }, 1000); // Update every second
+      	var myVar = setInterval(function(){ updateDate() }, 1000000);
+
+	</script>
+
+</body>
+</html>
