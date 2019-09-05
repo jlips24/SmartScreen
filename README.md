@@ -2,8 +2,10 @@
 A node based web application that acts as a useful source of information about the day
 
 ## Installation
-1. Open terminal to the project folder
-2. Run the following command
+1. Clone this repository by running the following command in terminal
+> git clone https://github.com/jlips24/SmartScreen.git
+2. Open terminal to the project folder
+3. Run the following command
 > npm i
 
 ## Usage
