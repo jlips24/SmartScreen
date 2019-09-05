@@ -12,3 +12,4 @@ A node based web application that acts as a useful source of information about t
 > npm run start
 *or* to start in dev mode
 > npm run devStart
+3. Open a web browser and navigate to http://localhost:3000
